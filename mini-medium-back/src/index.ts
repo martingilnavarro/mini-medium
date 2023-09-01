@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client'
 import express from 'express'
+const cors = require('cors')
 
 const prisma = new PrismaClient()
 const app = express()
@@ -8,6 +9,7 @@ app.use(express.json())
 app.use(express.urlencoded())
 
 //Get all the posts
+app.use(cors())
 app.get('/post', async (req, res) => {
   const posts = await prisma.post.findMany({
     orderBy: {createdAt: 'desc'}

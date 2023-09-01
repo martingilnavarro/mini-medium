@@ -1,31 +1,28 @@
-import Link from 'next/link'
 import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+import Stack from '@mui/material/Stack';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
  
 export default function Page() {
   return (
   <>
-  <Box
-      component="form"
-      sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch' },
-      }}
-      noValidate
-      autoComplete="off"
-    >
-      <div>
+  <Grid container direction='column' alignItems='center' style={{ minHeight: '100vh', backgroundColor: '#FAFFFF' }}>
 
-        <h1>Welcome to Mini Medium!</h1>
-        <p>If you're new in this platform, create a user by clicking on "Sign up".</p>
-        <p>If you already have an account, click on "Sign in"</p>
+    
 
+      <Typography variant="h4">Welcome to Mini Medium!</Typography>
+      <br/><br/>
+      <Typography>If you're new in this platform, create a user by clicking on "Sign up".</Typography>
+      <br/>
+      <Typography>If you already have an account, click on "Sign in"</Typography>
+      <br/><br/>
+       <Stack direction="row" spacing={2}>
        <Button variant="contained" href="/signup">Sign up</Button>
        <br/><br/>
        <Button variant="contained" href="/signin">Sign in</Button>
-      </div>
-    </Box>
-  
+       </Stack>
+ 
+    </Grid>
   </>
   )
 }

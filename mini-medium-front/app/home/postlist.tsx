@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import CardHeader from '@mui/material/CardHeader';
 
 async function getData() {
   const posts = await fetch('http://localhost:3001/post', { cache: 'no-store' })
@@ -21,12 +21,19 @@ export default async function Postlist() {
 
     
     posts.map(post => <>
-                            <h1>{post.title}</h1>
+                          <Card sx={{ maxWidth: 700}}> 
+
+                            <CardHeader 
+                              title={post.title}    
+                            />
+                            <CardContent> 
                             <p> author: {post.authorId}</p>
                             <p> date: {post.createdAt}</p>
                             <p>{post.content}</p>
+                            </CardContent>
+                          </Card>
                             </>)
-                            
+                          
                             )
   
 }

@@ -1,29 +1,25 @@
-import Link from 'next/link'
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
  
 export default function Page() {
   return (
   <>
-  <Box
-      component="form"
-      sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch' },
-      }}
-      noValidate
-      autoComplete="off"
-    >
-      <div>
+  <Grid container direction='column' alignItems='center' 
+  style={{ minHeight: '100vh', backgroundColor: '#FAFFFF' }}>
+ 
+ <Typography variant="h4">Sign in with email</Typography>
+  <br/>
+  <Typography>Enter the email and password of your account</Typography>
+  <br/>
 
-        <h1>Sign in with email</h1>
-        <p>Enter the email and password of your account</p>
-        
-        <br/>
+  <form id="signInForm">
         <TextField
           required
           id="your-email-input"
           type="email"
+          name="email"
           label="Your email"
           variant="standard"
         />
@@ -32,14 +28,15 @@ export default function Page() {
           required
           id="password-input"
           label="Password"
+          name="password"
+          type="password"
           variant="standard"
         />
         <br/> <br/>
     
        <Button variant="contained" href="./home">Sign in</Button>
-      </div>
-    </Box>
-  
+      </form>
+    </Grid>
   </>
   )
 }
