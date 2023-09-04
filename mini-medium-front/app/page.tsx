@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 export default function Page() {
   return (
   <>
-  <Grid container direction='column' alignItems='center' style={{ minHeight: '100vh', backgroundColor: '#FAFFFF' }}>
+  <Grid container direction='column' alignItems='center' style={{ minHeight: '100vh'}}>
 
     
 

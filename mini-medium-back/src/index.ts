@@ -22,6 +22,14 @@ app.post(`/user`, async (req, res) => {
   const user = await prisma.user.create({
     data: { ...req.body },
   })
+ 
+  res.redirect("http://localhost:3000/home")
+})
+
+//Sign in
+app.post(`/signin`, async (req, res) => {
+    
+ 
   res.redirect("http://localhost:3000/home")
 })
 

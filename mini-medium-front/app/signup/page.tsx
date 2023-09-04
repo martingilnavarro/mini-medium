@@ -15,16 +15,7 @@ export default function Page() {
   const [email, setEmail] = useState('') // useState to store Email address of the user
   const [password, setPassword] = useState('') // useState to store Password
   const [passwordConfirmation, setPasswordConfirmation] = useState('') // useState to store Password
-function validateForm() {
-  // Check if the First Name is an Empty string or not.
-
-  if (firstName.length == 1) {
-
-    alert('Invalid Form, First Name can not be one letter')
-    return
-  }
-}
-
+  
 
   return (
   <>
@@ -89,7 +80,7 @@ function validateForm() {
       onChange={(e) => setPasswordConfirmation(e.target.value)}
     />
     <br/><br/>
-    <Button variant="contained" type="submit" onClick={()=>validateForm()} >Sign up</Button>
+    <Button variant="contained" type="submit" fullWidth >Sign up</Button>
   </form>
 
   </Grid>

@@ -7,7 +7,7 @@ export default function Page() {
   return (
   <>
   <Grid container direction='column' alignItems='center' 
-  style={{ minHeight: '100vh', backgroundColor: '#FAFFFF' }}>
+  style={{ minHeight: '100vh' }}>
 
 <Typography variant="h4">Your Post</Typography>
   <br/>
@@ -40,6 +40,8 @@ export default function Page() {
       label="Tell your story"
       name="content"
       variant="standard"
+      type="textArea"
+      rows={4}
       multiline= {true}
     />
     <br/> <br/>

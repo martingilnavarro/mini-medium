@@ -9,13 +9,13 @@ export default async function Page() {
   return (
   <>
   <Stack direction="row" spacing={2}>
-  <Button variant="contained" href="/write">Write</Button>
+  <Button variant="text" href="/write">Write</Button>
        
-  <Button variant="contained" href="/">Log Out</Button>
+  <Button variant="text" href="/">Log Out</Button>
   </Stack>
 
   <Grid container direction='column' alignItems='center' 
-  style={{ minHeight: '100vh', backgroundColor: '#FAFFFF' }}>
+  style={{ minHeight: '100vh' }}>
     
        
     < Postlist />
