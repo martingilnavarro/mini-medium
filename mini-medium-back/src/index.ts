@@ -28,9 +28,25 @@ app.post(`/user`, async (req, res) => {
 
 //Sign in
 app.post(`/signin`, async (req, res) => {
-    
- 
-  res.redirect("http://localhost:3000/home")
+ const email = req.body.email   
+ const password = req.body.password
+ const user = await prisma.user.findFirst(
+  {
+    where: {
+      AND: [
+        {
+          email
+        },
+        {
+          password
+        }
+        
+      ]
+    }
+  }
+ )
+ if (!user) {res.redirect("http://localhost:3000/resignin")}
+  else {res.redirect("http://localhost:3000/home")}
 })
 
 

@@ -16,6 +16,7 @@ async function getData() {
  
 export default async function Postlist() {
   const posts = await getData()
+  
  
   return (
 
