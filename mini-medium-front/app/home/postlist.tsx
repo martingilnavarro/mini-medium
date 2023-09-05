@@ -16,19 +16,15 @@ async function getData() {
  
 export default async function Postlist() {
   const posts = await getData()
-  
- 
+
   return (
 
-    
     posts.map(post => <>
                           <Card sx={{ maxWidth: 700}}> 
-
-
                             <CardContent> 
                               <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                                 {post.authorId}  -  
-                                {post.createdAt}
+                                {(post.createdAt)}
                               </Typography>
                               <Typography variant="h5" component="div">
                                 {post.title}   

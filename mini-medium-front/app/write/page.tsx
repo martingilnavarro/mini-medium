@@ -5,19 +5,17 @@ import Typography from '@mui/material/Typography';
  
 export default function Page() {
   return (
-  <>
-  <Grid container direction='column' alignItems='center' 
+  
+<Grid container direction='column' alignItems='center' 
   style={{ minHeight: '100vh' }}>
 
-<Typography variant="h4">Your Post</Typography>
+  <Typography variant="h4">Your Post</Typography>
   <br/>
-<Typography>Write your post</Typography>
+  <Typography>Write your post</Typography>
   <br/>
 
   <form id="postForm" action="http://localhost:3001/post" method="post" >
-  <br/>
-
-  <br/>
+    <br/><br/>
     <TextField
       required
       id="author-input"
@@ -25,7 +23,7 @@ export default function Page() {
       name="authorId"
       variant="standard"
     />
-  <br/>
+    <br/>
     <TextField
       required
       id="title-input"
@@ -33,7 +31,7 @@ export default function Page() {
       name="title"
       variant="standard"
     />
-  <br/>
+    <br/>
     <TextField
       required
       id="content-input"
@@ -49,7 +47,7 @@ export default function Page() {
     <Button variant="contained" type="submit" >Publish</Button>
   </form>
 
-  </Grid>
-  </>
+</Grid>
+  
   )
 }

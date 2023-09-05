@@ -8,8 +8,6 @@ export default function Page() {
   <>
   <Grid container direction='column' alignItems='center' style={{ minHeight: '100vh'}}>
 
-    
-
       <Typography variant="h4">Welcome to Mini Medium!</Typography>
       <br/><br/>
       <Typography>If you're new in this platform, create a user by clicking on "Sign up".</Typography>
