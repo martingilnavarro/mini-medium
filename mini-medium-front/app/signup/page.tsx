@@ -64,6 +64,7 @@ export default function Page() {
         value={password}
         type="password"
         variant="standard"
+        inputProps={{ minLength: 6 }}
         onChange={(e) => setPassword(e.target.value)}
       />
       <br/>
@@ -74,6 +75,7 @@ export default function Page() {
         type="password"
         value={passwordConfirmation}
         variant="standard"
+        inputProps={{ minLength: 6 }}
         onChange={(e) => setPasswordConfirmation(e.target.value)}
       />
       <br/><br/>
